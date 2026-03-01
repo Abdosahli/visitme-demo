@@ -1,0 +1,174 @@
+/* ===== SECTION ===== */
+.categories-section {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+.section-title {
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  font-weight: 700;
+  text-align: center;
+  color: #0f2e24;
+  margin-bottom: 0.8rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #b8962e);
+  margin: 16px auto 0;
+  border-radius: 4px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 3.5rem;
+}
+
+/* ===== SLIDE ===== */
+.category-slide {
+  padding: 0 18px;
+}
+
+/* ===== CARD ===== */
+.category-card {
+  position: relative;
+  height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* CARD HOVER (ONLY CARD MOVES) */
+.category-card:hover {
+  transform: translateY(-16px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.28);
+}
+
+/* ===== IMAGE (NO HOVER EFFECT) ===== */
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: none;
+}
+
+/* ===== OVERLAY ===== */
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.05)
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  transition: background 0.35s ease;
+}
+
+ 
+
+/* ===== TEXT ===== */
+.category-overlay h3 {
+  color: #d4af37; /* Gold color */
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease; /* smooth transition */
+  position: relative;
+}
+
+/* Hover effect */
+.category-card:hover h3 {
+  transform: translateY(-8px) scale(1.05); /* moves up and slightly bigger */
+  color: #ffd700; /* brighter gold on hover */
+}
+
+/* Optional: underline animation */
+.category-card:hover h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #e6c200);
+  border-radius: 2px;
+  animation: slideUnderline 0.4s ease forwards;
+}
+
+@keyframes slideUnderline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+/* ===== REMOVE DEFAULT ARROWS ===== */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+ 
+ 
+
+ 
+/* ===== SLIDER ARROWS ===== */
+.slider-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  color: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background: #111;
+  color: #fff;
+}
+
+.slider-arrow.prev {
+  left: -28px;
+}
+
+.slider-arrow.next {
+  right: -28px;
+}
+
+/* Remove default slick arrows */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}

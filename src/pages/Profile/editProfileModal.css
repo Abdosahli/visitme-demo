@@ -1,0 +1,164 @@
+/* ===== BUTTON ===== */
+.btn-edit {
+  padding: 12px 26px;
+  border-radius: 999px;
+  margin-top: 15px;
+  border: none;
+  background: linear-gradient(90deg, #d4af37, #f1d27a);
+  color: #0b1f19;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-edit:hover {
+  background: #b5922b;
+}
+
+/* ===== OVERLAY ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* ===== MODAL CARD (LOGIN STYLE) ===== */
+.modal-card {
+  width: 420px;
+  padding: 35px;
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 46, 36, 0.95),
+    rgba(11, 31, 25, 0.97)
+  );
+
+  border: 1px solid rgba(212, 175, 55, 0.3);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(14px);
+  color: #fff;
+  animation: modalIn 0.35s ease;
+}
+
+/* ===== TITLES ===== */
+.modal-title {
+  text-align: center;
+  font-size: 22px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 6px;
+}
+
+.modal-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 22px;
+}
+
+/* ===== FORM ===== */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-input {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+.textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+/* ===== ACTIONS ===== */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+/* ===== BUTTONS ===== */
+.btn-save {
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #d4af37, #f1d27a);
+  color: #0b1f19;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-save:hover {
+  background: #b5922b;
+}
+
+.btn-cancel {
+  background: transparent;
+  border: none;
+  color: #cccccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  color: #ffffff;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* ===== MODAL HEADER ===== */
+.modal-header {
+  text-align: center;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+
+.modal-header::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, #d4af37, #f1d27a);
+  border-radius: 2px;
+}
+
+.modal-title {
+  font-size: 22px;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.5px;
+}
+
+.modal-subtitle {
+  font-size: 14px;
+  color: #cccccc;
+  margin-top: 6px;
+}

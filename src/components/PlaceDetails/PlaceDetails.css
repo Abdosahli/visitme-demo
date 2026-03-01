@@ -1,0 +1,78 @@
+/* Hero */
+.place-hero {
+  position: relative;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content h1 { font-size:3rem; margin-bottom:0.5rem; font-weight:700; }
+.hero-content p { font-size:1.2rem; opacity:0.85; margin-bottom:1.5rem; }
+
+.hero-actions button {
+  padding:0.8rem 2rem; margin:0 0.5rem; border-radius:25px;
+  border:none; font-weight:600; cursor:pointer; transition:0.3s;
+}
+.btn-gold { background:#D4AF37; color:#1C1C1C; }
+.btn-gold:hover { background:#b5922b; }
+.btn-dark { background:#1C1C1C; color:#fff; }
+.btn-dark:hover { background:#333; }
+
+/* Tabs */
+.tabs {
+  display:flex;
+  gap:1.5rem;
+  margin:2rem 0 1rem;
+  font-weight:600;
+  cursor:pointer;
+}
+.tabs span { position:relative; padding-bottom:0.3rem; color:#555; }
+.tabs span.active { color:#D4AF37; }
+.tabs span.active::after {
+  content:""; position:absolute; bottom:0; left:0; width:100%;
+  height:2px; background:#D4AF37; border-radius:2px;
+}
+
+/* Tab Content */
+.tab-content { margin-bottom:3rem; }
+
+/* Overview */
+.place-info-cards {
+  display:flex;
+  gap:2rem;
+  margin-top:1rem;
+  flex-wrap:wrap;
+}
+.place-info-cards div { background:#fff; padding:1rem 1.5rem; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.05); }
+
+/* Photos */
+.photos-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
+.photos-grid img { width:100%; border-radius:12px; object-fit:cover; }
+
+/* Menu */
+.menu-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem; }
+.menu-card { text-align:center; background:#fff; border-radius:15px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.05); transition:0.3s; }
+.menu-card:hover { transform:translateY(-5px); }
+.menu-card img { width:100%; height:150px; object-fit:cover; }
+.menu-card h4 { margin:0.5rem 0; }
+.menu-card span { color:#D4AF37; font-size:0.85rem; }
+
+/* Reviews */
+.reviews-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
+.review-card { background:#fff; border-radius:12px; padding:1rem 1.5rem; box-shadow:0 5px 15px rgba(0,0,0,0.05); }
+.review-card h4 { margin-bottom:0.3rem; }
+.review-card span { color:#D4AF37; font-weight:600; }
+
+/* Location */
+.location iframe { border-radius:12px; box-shadow:0 5px 20px rgba(0,0,0,0.1); }
