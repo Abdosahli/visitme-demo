@@ -53,11 +53,14 @@ const Profile = () => {
     <span className="value">2025</span>
   </p>
 </div>
+ <button className="btn-edit" onClick={() => setOpen(true)}>
+              Edit Profile
+            </button>
+             
 
-             <EditProfileModal/>
 
           </div>
-
+<EditProfileModal open={open} setOpen={setOpen} />
           {/* Right */}
            
            <div className="profile-card">
@@ -84,9 +87,10 @@ const Profile = () => {
 </div>
 
         </div>
+              <Footer />
+
       </section>
 
-      <Footer />
     </>
   );
 };

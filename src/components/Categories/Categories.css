@@ -172,3 +172,57 @@
 .slick-next {
   display: none !important;
 }
+/* ===== MOBILE VERSION ===== */
+@media (max-width: 768px) {
+
+  .categories-section {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    padding: 0 10px;
+  }
+
+  /* Slider spacing */
+  .category-slide {
+    padding: 0 10px;
+  }
+
+  /* Card */
+  .category-card {
+    height: 280px;
+    border-radius: 18px;
+  }
+
+  /* Overlay padding */
+  .category-overlay {
+    padding: 20px;
+  }
+
+  /* Text */
+  .category-overlay h3 {
+    font-size: 1.4rem;
+  }
+
+  /* Remove hover effects for mobile */
+  .category-card:hover {
+    transform: none;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  }
+
+  .category-card:hover h3 {
+    transform: none;
+  }
+
+  /* Hide arrows on mobile (swipe instead) */
+  .slider-arrow {
+    display: none;
+  }
+
+}

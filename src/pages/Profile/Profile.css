@@ -1,6 +1,7 @@
 .profile-page {
    
   font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
   
 }
 
@@ -124,6 +125,21 @@
   font-size: 13px;
   color: #cccccc;
   letter-spacing: 0.3px;
+}
+
+/* ===== BUTTON ===== */
+.btn-edit {
+  padding: 12px 26px;
+  border-radius: 999px;
+  margin-top: 15px;
+  border: none;
+  background: linear-gradient(90deg, #d4af37, #f1d27a);
+  color: #0b1f19;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-edit:hover {
+  background: #b5922b;
 }
 
 /* ===== RESPONSIVE ===== */
