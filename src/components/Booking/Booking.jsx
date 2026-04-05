@@ -1,4 +1,4 @@
-import "./booking.css";
+import "./Booking.css";
 import { FaTimes } from "react-icons/fa";
 
 const Booking = ({ open, setOpen }) => {
