@@ -14,9 +14,9 @@ const EditProfileModal = ({ open, setOpen }) => {
       >
 
         {/* HEADER */}
-        <div className="modal-header">
+        <div className="modal-header1">
 
-          <h2 className="modal-title">Edit Profile</h2>
+          <h2 className="modaltitle">Edit Profile</h2>
 
           <button
             className="modal-close"

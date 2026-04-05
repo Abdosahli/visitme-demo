@@ -34,6 +34,16 @@ const TrustedReviews = () => {
       avatar:
         "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
     },
+    {
+      id: 4,
+      name: "Fatima Zahra",
+      role: "Local Guide",
+      content:
+        "I use VisitMe to recommend places to tourists. The platform showcases the best of Moroccan hospitality.",
+      rating: 4,
+      avatar:
+        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    },
   ];
 
   return (

@@ -50,6 +50,7 @@ const topRatedSpots = [
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80",
     tags: ["Relaxation", "Traditional", "Wellness"],
   },
+  
 ];
 
 const TopRatedSpots = () => {

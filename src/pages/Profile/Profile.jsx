@@ -2,11 +2,13 @@ import React from "react";
 import { useState } from "react";
 import "./Profile.css";
 import Navbar from "../../components/Navbar";
+import ActivityModal from "./ActivityModal";
 import Footer from "../../components/Footer/Footer";
 import EditProfileModal from "./EditProfileModal";
 const Profile = () => {
 
-   const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [openActivity,setOpenActivity] = useState(null);
 
 
   return (
@@ -64,28 +66,41 @@ const Profile = () => {
           {/* Right */}
            
            <div className="profile-card">
-  <div className="profile-card-header">
-    <h3>My Activity</h3>
-  </div>
+          <div className="profile-card-header">
+            <h3>My Activity</h3>
+          </div>
 
-  <div className="profile-stats">
-    <div className="stat-item">
+          <div className="profile-stats">
+    <div 
+      className="stat-item"
+      onClick={()=>setOpenActivity("reviews")}
+    >
       <h4>12</h4>
       <span>Reviews</span>
     </div>
 
-    <div className="stat-item">
+            <div 
+      className="stat-item"
+      onClick={()=>setOpenActivity("bookings")}
+    >
       <h4>8</h4>
       <span>Bookings</span>
     </div>
 
-    <div className="stat-item">
+    <div 
+      className="stat-item"
+      onClick={()=>setOpenActivity("favorites")}
+    >
       <h4>5</h4>
       <span>Favorites</span>
     </div>
-  </div>
-</div>
-
+            
+          </div>
+        </div>
+<ActivityModal 
+     type={openActivity}
+     setOpen={setOpenActivity}
+  />
         </div>
               <Footer />
 

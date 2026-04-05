@@ -43,7 +43,7 @@ const CategoryPage = () => {
                   ⭐ {place.rating} • {place.price}
                 </div>
 
-                <Link to={`/place/${place.id}`} className="btn-gold btn-view">
+                <Link to={`/place/${place.id}`} className="">
                 <button>View Details</button>
                 </Link>
               </div>
