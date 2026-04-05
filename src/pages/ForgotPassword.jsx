@@ -13,7 +13,7 @@ const ForgotPassword = () => {
           <img src={logo} alt="VisitMe Logo" className="logo-image" />
         </div>
 
-        {/* Title */}
+        {/* Title000555555 */}
         <div className="welcome-container">
           <h1 className="welcome-title">Forgot Password</h1>
           <p className="welcome-subtitle">
