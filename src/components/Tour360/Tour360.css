@@ -1,144 +1,192 @@
-/* ===== OVERLAY ===== */
-
-.tour-overlay{
-position:fixed;
-inset:0;
-
-background:rgba(10,10,10,0.75);
-backdrop-filter:blur(10px);
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-z-index:9999;
-
-animation:fadeIn 0.3s ease;
+.tour-overlay-vpro {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.4s ease;
 }
 
-
-/* ===== CONTAINER ===== */
-
-.tour-container{
-
-width:90%;
-height:90%;
-
-border-radius:18px;
-
-overflow:hidden;
-
-position:relative;
-
-background:linear-gradient(
-180deg,
-rgba(15,46,36,0.95),
-rgba(11,31,25,0.97)
-);
-
-border:1px solid rgba(212,175,55,0.3);
-
-box-shadow:
-0 30px 70px rgba(0,0,0,0.45),
-inset 0 1px 0 rgba(255,255,255,0.05);
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-animation:modalZoom 0.35s ease;
-
+.tour-modal-vpro {
+  width: 95%;
+  max-width: 1200px;
+  height: 85vh;
+  background: #000;
+  border-radius: 24px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.8);
 }
 
-
-/* ===== IMAGE ===== */
-
-.tour-image{
-
-width:100%;
-height:100%;
-
-object-fit:contain;
-
+.tour-header {
+  padding: 18px 25px;
+  background: rgba(11, 31, 25, 0.95); /* Dark Green VisitMe */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
-
-/* ===== CLOSE BUTTON ===== */
-
-.tour-close{
-
-position:absolute;
-
-top:20px;
-right:20px;
-
-width:42px;
-height:42px;
-
-border-radius:50%;
-
-border:none;
-
-background:linear-gradient(
-90deg,
-#d4af37,
-#f1d27a
-);
-
-color:#0b1f19;
-
-font-size:18px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-cursor:pointer;
-
-transition:0.3s;
-
+.tour-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f1d27a;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
 }
 
-.tour-close:hover{
-
-transform:scale(1.1);
-
+.live-dot {
+  width: 10px;
+  height: 10px;
+  background: #ff0000;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #ff0000;
+  animation: pulse 1.5s infinite;
 }
 
-
-/* ===== ANIMATIONS ===== */
-
-@keyframes modalZoom{
-
-from{
-opacity:0;
-transform:scale(0.9);
+#panorama-container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
 }
 
-to{
-opacity:1;
-transform:scale(1);
+#panorama-container:active { cursor: grabbing; }
+
+/* Custom UI Pannellum (Google Style) */
+.pnlm-compass {
+  right: 25px !important;
+  top: 85px !important;
 }
 
+.pnlm-zoom-controls {
+  right: 25px !important;
+  bottom: 85px !important;
 }
 
-@keyframes fadeIn{
-
-from{opacity:0;}
-to{opacity:1;}
-
+.tour-close-vpro {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #f1d27a;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-/* ===== RESPONSIVE ===== */
-
-@media(max-width:768px){
-
-.tour-container{
-
-width:95%;
-height:80%;
-
+.tour-close-vpro:hover {
+  background: #d4af37;
+  color: #0b1f19;
+  transform: rotate(90deg);
 }
 
+.tour-footer {
+  padding: 12px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  background: rgba(11, 31, 25, 1);
 }
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+/* Update s-sahm */
+.vpro-arrow-up, .vpro-arrow-down {
+  width: 40px; /* Sghernah chwiya */
+  height: 40px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/271/271237.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  opacity: 0.8;
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.5)); /* Zid shadow bash i-ban wast l-ard */
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.vpro-arrow-up, .vpro-arrow-down {
+  width: 50px;
+  height: 50px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/271/271237.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  
+  /* Hada huwa s-sir dial Google Maps vibe */
+  transform: perspective(100px) rotateX(45deg); 
+  filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.3));
+  
+  transition: 0.3s ease;
+}
+
+.vpro-arrow-up:hover {
+  transform: perspective(100px) rotateX(45deg) scale(1.1) translateY(-5px);
+  filter: drop-shadow(0px 15px 10px rgba(212, 175, 55, 0.6));
+}
+/* Container dial l-360 */
+#panorama-container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+/* ===== GOOGLE STYLE ARROW ===== */
+.vpro-arrow-move {
+  width: 60px;
+  height: 60px;
+  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/expand_less_white_24dp.png'); /* Google Arrow */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  /* Hada huwa s-sir: Perspective bach i-ban s-sahm f l-ard */
+  transform: perspective(100px) rotateX(60deg); 
+  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.vpro-arrow-move:hover {
+  background-color: rgba(212, 175, 55, 0.8); /* Gold on hover */
+  transform: perspective(100px) rotateX(60deg) scale(1.2);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+/* Tooltip dial Pannellum */
+.pnlm-hotspot-base:hover span {
+  display: block;
+  background: rgba(11, 31, 25, 0.9);
+  padding: 5px 12px;
+  border-radius: 5px;
+  color: #f1d27a;
+  border: 1px solid #d4af37;
+  transform: translateY(-50px);
+}
+
+/* Compass & Zoom (Vision Pro Position) */
+.pnlm-compass { right: 25px !important; top: 85px !important; }
+.pnlm-zoom-controls { right: 25px !important; bottom: 85px !important; }

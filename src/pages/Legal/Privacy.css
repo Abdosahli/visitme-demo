@@ -1,0 +1,75 @@
+/* ===== Privacy Page Base ===== */
+.privacy-page {
+  background-color: #f9fafb;
+  color: #1f2937;
+  min-height: 160vh;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== Hero Section ===== */
+.privacy-hero {
+  background: linear-gradient(135deg, #0b1f19 0%, #0f2e24 100%);
+  color: #ffffff;
+  padding: 100px 24px 60px;
+  text-align: center;
+}
+
+.privacy-hero h1 {
+  font-size: 2.5rem;
+  color: #f5d27a;
+  margin-bottom: 10px;
+}
+
+.privacy-hero p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* ===== Content Section ===== */
+.privacy-content {
+  max-width: 800px;
+  margin: -40px auto 80px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.privacy-content section {
+  margin-bottom: 30px;
+}
+
+.privacy-content h2 {
+  color: #0b1f19;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border-left: 4px solid #f5d27a;
+  padding-left: 15px;
+}
+
+.privacy-content p {
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+.privacy-content ul {
+  padding-left: 20px;
+  color: #4b5563;
+}
+
+.privacy-content ul li {
+  margin-bottom: 8px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .privacy-content {
+    margin: 20px;
+    padding: 25px;
+  }
+  
+  .privacy-hero h1 {
+    font-size: 2rem;
+  }
+}

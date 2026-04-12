@@ -10,7 +10,7 @@ const Footer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // هنا من بعد تقدر تزيد API
+     
     setSuccess(true);
     setEmail("");
 
@@ -53,10 +53,10 @@ const Footer = () => {
         <div className="footer-links">
           <div className="horizontal">
             <h4>About Us</h4>
-            <a href="#">How It Works</a>
-            <a href="#">Our Story</a>
-            <a href="#">Careers</a>
-            <a href="#">Contact Us</a>
+            <a href="how-it-works">How It Works</a>
+            <a href="our-story">Our Story</a>
+            <a href="Community">Community</a>
+            <a href="contact">Contact Us</a>
           </div>
 
           <div className="horizontal">
@@ -69,10 +69,10 @@ const Footer = () => {
 
           <div className="horizontal">
             <h4>Resources</h4>
-            <a href="#">Help Center</a>
-            <a href="#">FAQs</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="help">Help Center</a>
+            <a href="faq">FAQs</a>
+            <a href="privacy">Privacy Policy</a>
+            <a href="terms">Terms of Service</a>
           </div>
 
           <div>

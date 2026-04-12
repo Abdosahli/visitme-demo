@@ -226,3 +226,33 @@
   }
 
 }
+@media (max-width: 768px) {
+  /* Fix l-container f mobile */
+  .container {
+    padding: 0 15px;
+    overflow: hidden; /* Bach arrows may-kherjosh l-zaneqa */
+  }
+
+  .categories-section {
+    padding: 3rem 0; /* Qellel chwiya l-padding */
+  }
+
+  /* Khelly l-card tban mzyan */
+  .category-card {
+    height: 320px; /* Tteba3 m3a l-mobile */
+    margin: 10px 5px; /* Spacing bin les cartes */
+  }
+
+  /* Dots style (ila zdtihom) */
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-dots li button:before {
+    color: #d4af37;
+  }
+
+  /* Fix l-Link hit baghy dayer Link wast Link (Double nesting) */
+  /* Red-bal: 3ndk <div className="category-card"> wastou <Link className="category-card"> */
+  /* Ahsan t-khelli ghir wa7da */
+}

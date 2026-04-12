@@ -1,0 +1,96 @@
+/* ===== FAQ Page Base ===== */
+.faq-page {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 80px;
+}
+
+/* ===== Hero Section ===== */
+.faq-hero {
+  background: linear-gradient(135deg, #0b1f19 0%, #0f2e24 100%);
+  color: #ffffff;
+  padding: 100px 24px 80px;
+  text-align: center;
+}
+
+.faq-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #f5d27a;
+  margin-bottom: 15px;
+}
+
+/* ===== FAQ List ===== */
+.faq-container {
+  max-width: 800px;
+  margin: -40px auto 0;
+  padding: 0 20px;
+}
+
+.faq-item {
+  background: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-item.active {
+  border-color: #f5d27a;
+}
+
+.faq-question {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.faq-question h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0b1f19;
+}
+
+.faq-question span {
+  color: #d4af37;
+  font-size: 0.9rem;
+}
+
+/* ===== Answer Animation ===== */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fcfcfc;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Adjust based on content */
+  border-top: 1px solid #f1f1f1;
+}
+
+.faq-answer p {
+  padding: 24px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 480px) {
+  .faq-hero {
+    padding: 80px 15px 60px;
+  }
+  
+  .faq-question {
+    padding: 18px;
+  }
+  
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+}
