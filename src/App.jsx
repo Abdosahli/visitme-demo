@@ -15,6 +15,8 @@ import HowItWorks from "./pages/About/HowItWorks";
 import OurStory from "./pages/About/OurStory";
 import Careers from "./pages/About/Community";
 import ContactUs from "./pages/About/ContactUs";
+import Dashboard from "./pages/partner/Dashboard";
+
 function App() {
   return (
     <>
@@ -39,6 +41,7 @@ function App() {
        <Route path="/our-story" element={<OurStory />} />
        <Route path="/Community" element={<Careers />} />
        <Route path="/contact" element={<ContactUs />} />
+       <Route path="/Dashboard" element={<Dashboard />} />
     </Routes>
     </>
   );

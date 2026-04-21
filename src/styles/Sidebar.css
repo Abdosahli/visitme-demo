@@ -1,0 +1,44 @@
+/* --- DASHBOARD & GLASS CARDS --- */
+.v-main-canvas {
+  margin-left: 280px; /* Space for sidebar */
+  padding: 60px 50px;
+  background: #fdfbf7; /* Off-white luxury background */
+}
+
+/* STAT CARDS LUXURY */
+.v-stat-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.v-stat-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.v-stat-label {
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #888;
+}
+
+.v-stat-value {
+  font-size: 32px; font-weight: 200;
+  font-family: 'Playfair Display', serif;
+  margin: 10px 0; color: #173a2a;
+}
+
+.v-stat-trend.up { color: #27ae60; font-size: 12px; font-weight: 700; }
+.v-stat-trend.down { color: #e74c3c; font-size: 12px; font-weight: 700; }
+
+/* GLASSMISM OVERLAY (Optional decorative) */
+.v-glass-overlay {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

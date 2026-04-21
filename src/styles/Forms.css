@@ -1,0 +1,34 @@
+/* --- PRO INPUTS & BUTTONS --- */
+.v-reply-btn {
+  background: #173a2a;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.v-reply-btn:hover {
+  background: #d4af37;
+  color: #173a2a;
+}
+
+.v-search-bar-pro input {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 12px 25px;
+  border-radius: 50px;
+  width: 300px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.v-search-bar-pro input:focus {
+  outline: none;
+  border-color: #d4af37;
+  width: 350px;
+}

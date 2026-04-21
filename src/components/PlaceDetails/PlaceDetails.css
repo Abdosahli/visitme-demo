@@ -760,3 +760,1178 @@ background:#d4af37;
 border-radius:3px;
 
 }
+
+/* ========================================= */
+/* VISION LUXE SECTION */
+/* ========================================= */
+
+.vision-luxe {
+  background: #ffffff !important;
+  padding: 150px 10% !important;
+  overflow: hidden;
+}
+
+.luxe-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 120px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Image Side */
+.luxe-visual-composition {
+  position: relative;
+}
+
+.image-wrapper-pro {
+  position: relative;
+  z-index: 10;
+  box-shadow: 40px 40px 0px -10px #173a2a; /* Solid offset shadow */
+}
+
+.luxe-img-main {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.05) brightness(0.95);
+}
+
+.floating-prestige-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: #d4af37;
+  color: #173a2a;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2px;
+  font-family: 'serif';
+}
+
+.gold-text { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; }
+.year-text { font-size: 22px; font-weight: 700; margin-top: 4px; }
+
+.background-accent-luxe {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #d4af37;
+  z-index: 1;
+}
+
+/* Text Side */
+.eyebrow-text {
+  display: block;
+  font-size: 12px;
+  color: #d4af37;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.luxe-title-v2 {
+  font-size: 58px !important;
+  color: #173a2a !important;
+  line-height: 1.1 !important;
+  font-weight: 300 !important;
+  margin-bottom: 40px !important;
+}
+
+.luxe-title-v2 span {
+  font-family: 'Playfair Display', serif; /* Had l'font dima f luxe */
+  font-style: italic;
+  font-weight: 400;
+}
+
+.luxe-description-v2 {
+  font-size: 19px !important;
+  color: #555 !important;
+  line-height: 1.9 !important;
+  margin-bottom: 45px !important;
+  border-left: 2px solid #d4af37;
+  padding-left: 30px;
+}
+
+/* Detail Grid */
+.luxe-grid-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.luxe-detail-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.luxe-icon-v2 { color: #d4af37; font-size: 18px; }
+
+.luxe-detail-info h6 {
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #173a2a;
+}
+
+.luxe-detail-info p { font-size: 14px; margin-top: 5px; color: #888; }
+
+/* Signature Block */
+.chef-curation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.chef-meta { display: flex; flex-direction: column; }
+.chef-label { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px; }
+.chef-name { font-size: 18px; font-weight: 600; color: #173a2a; }
+
+.luxe-sig-img {
+  height: 50px;
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .luxe-wrapper { grid-template-columns: 1fr; gap: 80px; }
+  .luxe-title-v2 { font-size: 40px !important; }
+}
+
+
+/* ========================================= */
+/* LUXURY GALLERY & 360 TOUR */
+/* ========================================= */
+
+.luxury-gallery {
+  padding: 100px 8% !important;
+  background: #fff !important;
+}
+
+.gallery-header-v2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Featured 360 Card */
+.tour-360-featured {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.tour-360-featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+
+.tour-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 58, 42, 0.4); /* Emerald transparent overlay */
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  transition: 0.4s;
+}
+
+.tour-360-featured:hover img { transform: scale(1.08); }
+.tour-360-featured:hover .tour-overlay { background: rgba(23, 58, 42, 0.6); }
+
+.tour-content h3 { font-size: 32px; letter-spacing: 2px; text-transform: uppercase; margin: 15px 0; }
+.tour-content p { font-size: 14px; opacity: 0.9; margin-bottom: 25px; letter-spacing: 1px; }
+
+.tour-btn-minimal {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  padding: 12px 35px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.tour-btn-minimal:hover { background: #d4af37; color: #173a2a; }
+
+/* Masonry Grid Design */
+.editorial-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px;
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/* Make some images larger for "Masonry" effect */
+.item-0 { grid-column: span 2; grid-row: span 2; }
+.item-1 { grid-column: span 2; grid-row: span 1; }
+.item-2 { grid-column: span 1; grid-row: span 1; }
+.item-3 { grid-column: span 1; grid-row: span 1; }
+
+.img-hover-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img-hover-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(212, 175, 55, 0.8); /* Gold overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.img-overlay span {
+  color: #173a2a;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #173a2a;
+}
+
+.gallery-item:hover .img-overlay { opacity: 1; }
+.gallery-item:hover img { transform: scale(1.1); }
+
+/* Pulse Animation for 360 */
+.pulse-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-gold 2s infinite;
+}
+
+.pulse-icon span { font-size: 10px; font-weight: 900; }
+
+@keyframes pulse-gold {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+@media (max-width: 900px) {
+  .editorial-gallery { grid-template-columns: repeat(2, 1fr); }
+  .item-0, .item-1 { grid-column: span 2; }
+}
+
+/* ========================================= */
+/* LUXURY SLIM MENU (PRO VISION) */
+/* ========================================= */
+
+.luxury-menu-slim {
+  background: #ffffff !important;
+  padding: 100px 10% !important;
+}
+
+.slim-menu-wrapper {
+  max-width: 1100px; /* Reduced width for intimacy */
+  margin: 0 auto;
+}
+
+.slim-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.gold-subtitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #d4af37;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.slim-title {
+  font-size: 45px !important;
+  color: #173a2a !important;
+  font-weight: 300 !important;
+}
+
+.slim-title span {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Slim Grid Layout */
+.slim-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between slim rows */
+}
+
+.slim-card {
+  display: flex;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  height: 200px; /* Fixed Slim Height */
+  overflow: hidden;
+  transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.slim-card:hover {
+  border-color: #d4af37;
+  transform: translateX(10px); /* Subtle shift to the right */
+  box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+}
+
+/* Small Focused Visual */
+.slim-visual {
+  width: 280px; /* Smaller fixed width */
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slim-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s ease;
+}
+
+.slim-card:hover .slim-visual img {
+  transform: scale(1.1);
+}
+
+.slim-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(23, 58, 42, 0.9);
+  color: #d4af37;
+  font-size: 10px;
+  font-weight: 700;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Sophisticated Content Side */
+.slim-info {
+  flex: 1;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slim-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.slim-row-top h3 {
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  color: #173a2a;
+  margin: 0;
+}
+
+.slim-price {
+  color: #d4af37;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.slim-desc {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  max-width: 80%;
+}
+
+.slim-footer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.slim-tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #bbb;
+  letter-spacing: 1px;
+}
+
+.slim-award {
+  background: #fdf8e6;
+  color: #c9a24d;
+  font-size: 9px;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+/* Footer Action */
+.slim-footer-action {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.gold-btn-minimal {
+  background: transparent;
+  border: 1px solid #173a2a;
+  color: #173a2a;
+  padding: 14px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gold-btn-minimal:hover {
+  background: #173a2a;
+  color: #d4af37;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .slim-card {
+    flex-direction: column;
+    height: auto;
+  }
+  .slim-visual {
+    width: 100%;
+    height: 200px;
+  }
+  .slim-info {
+    padding: 25px;
+  }
+}
+
+/* ========================================= */
+/* ULTRA LUXURY VISION: REVIEWS & LOCATION */
+/* ========================================= */
+
+/* Global Section Adjustments */
+.vision-header-pro {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.v-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: #d4af37;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.v-title {
+  font-size: 55px !important;
+  color: #173a2a !important;
+  font-weight: 200 !important;
+}
+
+.v-title span {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Reviews - Editorial Layout */
+.vision-reviews {
+  background: #ffffff !important;
+  padding: 140px 10% !important;
+}
+
+.v-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 60px;
+}
+
+.v-review-card {
+  padding: 40px;
+  border-left: 1px solid #f0ede6; /* Minimalist vertical divider */
+  transition: 0.5s;
+}
+
+.v-review-card:hover {
+  border-left-color: #d4af37;
+  background: #fdfbf7;
+}
+
+.v-review-rating {
+  color: #d4af37;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.v-review-quote {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.v-review-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.v-author-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  filter: grayscale(1); /* High-end magazine feel */
+}
+
+.v-author-info h4 {
+  font-size: 14px;
+  color: #173a2a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.v-author-info span {
+  font-size: 11px;
+  color: #aaa;
+}
+
+/* Location - Architectural Split */
+.vision-location {
+  background: #173a2a !important; /* Switch to Dark Luxury */
+  padding: 0 !important; /* Full bleed */
+  color: white;
+}
+
+.v-location-wrapper {
+  display: flex;
+  min-height: 700px;
+}
+
+.v-location-content {
+  flex: 1;
+  padding: 120px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.v-location-content .v-title {
+  color: #fff !important;
+}
+
+.v-address-details {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.v-address-group label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.v-address-group p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.v-location-perks {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 50px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d4af37;
+}
+
+.v-map-btn {
+  width: fit-content;
+  background: #d4af37;
+  color: #173a2a;
+  border: none;
+  padding: 18px 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.v-map-btn:hover {
+  background: #fff;
+  transform: translateY(-5px);
+}
+
+/* Map Visual */
+.v-map-visual {
+  flex: 1.2;
+  position: relative;
+}
+
+.v-map-frame {
+  height: 100%;
+  width: 100%;
+}
+
+.v-map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: invert(90%) hue-rotate(180deg) brightness(0.9); /* Dark Mode Map */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .v-location-wrapper { flex-direction: column; }
+  .v-map-visual { height: 400px; }
+}
+
+
+/* ========================================= */
+/* THE ROYAL GALLERY (ULTRA LUXURY VISION) */
+/* ========================================= */
+
+.royal-gallery-section {
+  background: #ffffff !important;
+  padding: 160px 10% !important;
+  position: relative;
+}
+
+.royal-header {
+  text-align: left; /* Alignment to the left is more high-end */
+  margin-bottom: 120px;
+  max-width: 600px;
+}
+
+.royal-eyebrow {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #d4af37;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.royal-title {
+  font-size: 65px !important;
+  color: #173a2a !important;
+  font-weight: 200 !important;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.royal-title span {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.royal-accent {
+  width: 80px;
+  height: 1px;
+  background: #d4af37;
+  margin-top: 40px;
+}
+
+/* Grid: The Asymmetric Dance */
+.royal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 120px 80px;
+}
+
+/* Elite Card Composition */
+.royal-card {
+  position: relative;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.royal-link {
+  text-decoration: none;
+}
+
+/* Visual Wrapper */
+.royal-visual-wrapper {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.06);
+}
+
+.royal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 2s ease;
+}
+
+/* Glass Badge: The Vision Pro Touch */
+.royal-glass-badge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 12px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.royal-sep { color: #d4af37; }
+
+/* Discovery Circle */
+.royal-hover-layer {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 58, 42, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.6s ease;
+  z-index: 5;
+}
+
+.royal-discover-circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #d4af37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+.royal-discover-circle span {
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* Content Box */
+.royal-content {
+  padding-top: 40px;
+}
+
+.royal-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.royal-city {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #d4af37;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.royal-line-short {
+  width: 30px;
+  height: 1px;
+  background: #eee;
+}
+
+.royal-name {
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  color: #173a2a;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.royal-description {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.8;
+  max-width: 80%;
+}
+
+/* Asymmetric Offsets */
+@media (min-width: 1024px) {
+  .card-variant-1 { margin-top: 150px; } /* Offset every second card */
+}
+
+/* Hover States */
+.royal-card:hover { transform: translateY(-15px); }
+.royal-card:hover .royal-img { transform: scale(1.1); }
+.royal-card:hover .royal-hover-layer { opacity: 1; }
+.royal-card:hover .royal-discover-circle { transform: scale(1); }
+.royal-card:hover .royal-name { color: #d4af37; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .royal-grid { grid-template-columns: 1fr; }
+  .royal-visual-wrapper { height: 450px; }
+  .royal-title { font-size: 45px !important; }
+}
+/* ========================================= */
+/* ULTRA LUXURY PLATFORM FOOTER - VISION PRO */
+/* ========================================= */
+
+.v-pro-footer {
+  background: #0b1f19; /* Ultra Dark Emerald */
+  padding: 100px 10% 40px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid #d4af37; /* Signature Gold Top Border */
+}
+
+.v-footer-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Top Section */
+.v-footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+.v-footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.v-footer-logo span {
+  color: #d4af37;
+  font-style: italic;
+}
+
+.v-footer-tagline {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.4);
+  max-width: 300px;
+}
+
+/* Nav Columns */
+.v-footer-nav {
+  display: flex;
+  gap: 80px;
+}
+
+.v-nav-col h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #d4af37;
+  margin-bottom: 25px;
+}
+
+.v-nav-col a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 15px;
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+.v-nav-col a:hover {
+  opacity: 1;
+  padding-left: 8px;
+  color: #d4af37;
+}
+
+/* Separator */
+.v-footer-separator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.2), transparent);
+  margin-bottom: 40px;
+}
+
+/* Bottom Section */
+.v-footer-legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+/* Signature Styling */
+.v-signature {
+  font-weight: 600;
+}
+
+.v-signature span {
+  color: #d4af37;
+  font-weight: 900;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Background "Ghost" Text */
+.v-footer-bg-text {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 150px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.02);
+  letter-spacing: 30px;
+  pointer-events: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .v-footer-main { flex-direction: column; gap: 60px; }
+  .v-footer-bg-text { display: none; }
+  .v-footer-legal { flex-direction: column; gap: 20px; text-align: center; }
+}
+
+/* ========================================= */
+/* THE ULTIMATE VISION PRO HERO - LUXURY DNA */
+/* ========================================= */
+
+.v-pro-hero-final {
+  position: relative;
+  height: 100vh;
+  background: #0b1f19; /* Deepest Emerald */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.v-pro-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  filter: contrast(1.1) brightness(0.9);
+  animation: slowPan 30s infinite alternate;
+}
+
+@keyframes slowPan {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+.v-pro-gradient-mask {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 10%, rgba(11, 31, 25, 0.5) 100%),
+              linear-gradient(to top, #0b1f19 5%, transparent 60%);
+  z-index: 2;
+}
+
+/* Content Aesthetics */
+.v-pro-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+  padding: 0 5%;
+}
+
+.v-pro-badge {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 10px 30px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  animation: fadeInDown 1.2s ease;
+}
+
+.v-pro-gold-icon { color: #d4af37; font-size: 16px; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
+.v-pro-badge-text { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #fff; }
+
+/* The "Thin" Title Strategy */
+.v-pro-main-title {
+  font-size: clamp(60px, 10vw, 110px) !important;
+  font-family: 'Playfair Display', serif;
+  font-weight: 200 !important;
+  line-height: 0.9 !important;
+  margin-bottom: 50px !important;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.v-pro-main-title span {
+  font-style: italic;
+  font-weight: 400;
+  color: #d4af37;
+}
+
+/* Luxury Stats */
+.v-pro-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 70px;
+}
+
+.v-pro-stat-val { font-size: 26px; font-weight: 800; color: #fff; display: block; }
+.v-pro-stat-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 3px; color: #d4af37; margin-top: 8px; }
+.v-pro-stat-sep { width: 1px; height: 40px; background: rgba(212, 175, 55, 0.3); }
+
+/* BOUTONS: VISION PRO TACTILE FEEL */
+.v-pro-btn-gold {
+  background: #d4af37;
+  color: #0b1f19;
+  border: none;
+  padding: 22px 55px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+}
+
+.v-pro-btn-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 22px 55px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 20px;
+}
+
+.v-pro-btn-gold:hover { background: #fff; transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+.v-pro-btn-glass:hover { background: rgba(255, 255, 255, 0.15); border-color: #fff; transform: translateY(-10px); }
+
+/* Scroll Indicator */
+.v-pro-scroll-wrap {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.v-pro-scroll-bar {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, #d4af37, transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.v-pro-scroll-bar::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: #fff;
+  animation: scrollPro 2.5s infinite;
+}
+
+@keyframes scrollPro {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.v-pro-scroll-txt { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; color: #fff; opacity: 0.6; }
+
+@media (max-width: 900px) {
+  .v-pro-main-title { font-size: 50px !important; }
+  .v-pro-stats-row { flex-direction: column; gap: 30px; }
+  .v-pro-stat-sep { display: none; }
+  .v-pro-btn-glass { margin-left: 0; margin-top: 20px; width: 100%; }
+  .v-pro-btn-gold { width: 100%; }
+}
+
+

@@ -11,13 +11,28 @@ const gallery = [
   "https://images.unsplash.com/photo-1544145945-f90425340c7e",
   "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe",
   "https://images.unsplash.com/photo-1550547660-d9450f859349",
-  "https://images.unsplash.com/photo-1546069901-ba9599a7e63"
+  "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
 ];
 
 const dishes = [
-  { name: "Truffle Pasta", price: "$28" },
-  { name: "Steak Frites", price: "$34" },
-  { name: "Seafood Risotto", price: "$32" }
+  { 
+    name: "Truffle Pasta", 
+    price: "$28", 
+    image: "https://images.unsplash.com/photo-1559339352-11d035aa65de",
+    desc: "Hand-rolled tagliatelle, black winter truffle, and 24-month aged Parmigiano-Reggiano."
+  },
+  { 
+    name: "Steak Frites", 
+    price: "$34", 
+    image: "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg",
+    desc: "Prime Wagyu beef, triple-cooked Belgian fries, and our signature bordelaise sauce."
+  },
+  { 
+    name: "Seafood Risotto", 
+    price: "$32", 
+    image: "https://images.unsplash.com/photo-1550547660-d9450f859349",
+    desc: "Acquerello rice, wild-caught scallops, and saffron-infused shellfish bisque."
+  }
 ];
 
 const reviews = [
@@ -45,17 +60,27 @@ const suggestions = [
     image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
   },
   {
-    name: "Maison Rouge",
-    rating: "4.8",
-    image: "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b"
-  }
+  name: "Royal Garden Dining",
+  rating: "5.0",
+  image: "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg"
+},
+{
+  name: "Velvet Lounge",
+  rating: "4.8",
+  image: "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg"
+},
+{
+  name: "Golden Plate",
+  rating: "4.9",
+  image: "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg"
+}
 ];
 
 const PlaceDetails = ({ place }) => {
 
   const [tourOpen, setTourOpen] = useState(false);
   const [tab, setTab] = useState("overview");
-  const similarPlaces = places.slice(0,3);
+  const similarPlaces = places.slice(0,4);
   const [bookingOpen,setBookingOpen] = useState(false);
   return (
 
@@ -63,48 +88,64 @@ const PlaceDetails = ({ place }) => {
 
       <Navbar />
 
-      {/* HERO */}
+    {/* ULTRA-LUXURY HERO: THE AUTHORITY VISION */}
+<section className="v-pro-hero-final">
+  <div className="v-pro-bg-wrapper">
+    <img 
+      src="https://images.unsplash.com/photo-1559339352-11d035aa65de" 
+      alt="Le Jardin Gourmet Marrakech" 
+      className="v-pro-bg-img"
+    />
+    <div className="v-pro-gradient-mask"></div>
+  </div>
 
-      <section className="hero2">
+  <div className="v-pro-content">
+    {/* Official Platform Seal */}
+    <div className="v-pro-badge-container">
+      <div className="v-pro-badge">
+        <span className="v-pro-gold-icon">✧</span>
+        <span className="v-pro-badge-text">The Luxury Guide Selection 2026</span>
+      </div>
+    </div>
 
-        <img
-          src="https://images.unsplash.com/photo-1559339352-11d035aa65de"
-          alt="restaurant"
-        />
+    <h1 className="v-pro-main-title">
+      Le Jardin <span>Gourmet</span>
+    </h1>
 
-        <div className="hero-overla">
+    <div className="v-pro-stats-row">
+      <div className="v-pro-stat-item">
+        <span className="v-pro-stat-val">4.8</span>
+        <span className="v-pro-stat-lbl">Expert Rating</span>
+      </div>
+      <div className="v-pro-stat-sep"></div>
+      <div className="v-pro-stat-item">
+        <span className="v-pro-stat-val">$$$$</span>
+        <span className="v-pro-stat-lbl">Price Range</span>
+      </div>
+      <div className="v-pro-stat-sep"></div>
+      <div className="v-pro-stat-item">
+        <span className="v-pro-stat-val">Hivernage</span>
+        <span className="v-pro-stat-lbl">District</span>
+      </div>
+    </div>
 
-          <h1>Le Jardin Gourmet</h1>
+    <div className="v-pro-actions">
+      <button className="v-pro-btn-gold" onClick={() => setBookingOpen(true)}>
+        Secure a Table
+      </button>
+      <button className="v-pro-btn-glass" onClick={() => setTourOpen(true)}>
+        Virtual Inspection 360°
+      </button>
+    </div>
+  </div>
 
-          <div className="hero-info">
-            <span>📍 Marrakech</span>
-            <span>🍽 French Cuisine</span>
-            <span>⭐ 4.8</span>
-          </div>
-
-          <div className="hero-buttons">
-                    <button
-                      className="gold-btn"
-                      onClick={()=>setBookingOpen(true)}
-                      >
-                      Booking
-                    </button>
-                    
-                    <button 
-                    className="dark-btn" 
-                    onClick={() => setTourOpen(true)}
-                    >
-                    360° Tour
-                    </button>
-
-                   
-
-          </div>
-
-        </div>
-
-      </section>
-      <Booking
+  {/* Visual Luxury Indicator */}
+  <div className="v-pro-scroll-wrap">
+    <div className="v-pro-scroll-bar"></div>
+    <span className="v-pro-scroll-txt">Explore the Experience</span>
+  </div>
+</section>
+<Booking
         open={bookingOpen}
         setOpen={setBookingOpen}
       />
@@ -117,7 +158,7 @@ const PlaceDetails = ({ place }) => {
                     />
                      
                     )}
-      {/* NAVIGATION */}
+                    
 
       <div className="place-nav">
 
@@ -160,166 +201,328 @@ const PlaceDetails = ({ place }) => {
 
       {/* OVERVIEW */}
 
-      {tab === "overview" && (
-
-        <section className="section">
-
-          <h2>About</h2>
-
-          <p>
-            Experience fine dining in the heart of Marrakech.
-            Le Jardin Gourmet blends elegant atmosphere,
-            refined French cuisine and exceptional service.
-          </p>
-
-          <div className="features">
-            <div>🕐 12:00 - 23:00</div>
-            <div>🌿 Outdoor seating</div>
-            <div>📶 Free WiFi</div>
+  {tab === "overview" && (
+  <section className="section vision-luxe">
+    <div className="luxe-wrapper">
+      
+      {/* Visual Composition */}
+      <div className="luxe-visual-composition">
+        <div className="image-wrapper-pro">
+          <img 
+            src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=80" 
+            alt="Fine Dining" 
+            className="luxe-img-main"
+          />
+          {/* Badge de prestige */}
+          <div className="floating-prestige-badge">
+            <span className="gold-text">Est.</span>
+            <span className="year-text">2010</span>
           </div>
+        </div>
+        <div className="background-accent-luxe"></div>
+      </div>
 
-        </section>
+      {/* Content Composition */}
+      <div className="luxe-content-composition">
+        <header className="luxe-header-v2">
+          <span className="eyebrow-text">Heritage & Gastronomy</span>
+          <h2 className="luxe-title-v2">
+            The Soul of <span>Marrakech</span> <br/> In Every Plate
+          </h2>
+        </header>
 
-      )}
+        <p className="luxe-description-v2">
+          Step into a world where time slows down. <strong>Le Jardin Gourmet</strong> 
+          is a sanctuary of refined taste, blending the vibrant spirit of Moroccan 
+          hospitality with the flawless precision of French culinary arts. 
+        </p>
+
+        <div className="luxe-grid-details">
+          <div className="luxe-detail-box">
+            <span className="luxe-icon-v2">✦</span>
+            <div className="luxe-detail-info">
+              <h6>Ambiance</h6>
+              <p>Garden-inspired Serenity</p>
+            </div>
+          </div>
+          <div className="luxe-detail-box">
+            <span className="luxe-icon-v2">✦</span>
+            <div className="luxe-detail-info">
+              <h6>Cuisine</h6>
+              <p>Artisanal French Fusion</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="chef-curation">
+          <div className="chef-meta">
+            <span className="chef-label">Curated by</span>
+            <span className="chef-name">Jean-Pierre Laurent</span>
+          </div>
+          <div className="signature-wrap">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Chef Signature" className="luxe-sig-img" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+)}
 
       {/* GALLERY */}
 
-      {tab === "gallery" && (
+     {tab === "gallery" && (
+  <section className="section luxury-gallery">
+    <header className="gallery-header-v2">
+      
+      <h2 className="slim-title">A Glimpse of <span>Excellence</span></h2>
+       
+    </header>
 
-        <section className="section">
-
-          <h2>360°Tour</h2>
-
-          <div className="gallery-grid">
-
-            {gallery.map((img, i) => (
-              <img key={i} src={img} alt={`Gallery ${i}`} />
-            ))}
-
+    {/* Featured 360° Experience Card */}
+    <div className="tour-360-featured" onClick={() => setTourOpen(true)}>
+      <div className="tour-overlay">
+        <div className="tour-content">
+          <div className="pulse-icon">
+            <i className="fa-solid fa-arrows-to-eye"></i> {/* Use an icon or SVG */}
+            <span>360</span>
           </div>
+          <h3>Virtual Experience</h3>
+          <p>Explore our main hall in full immersive 360° tour</p>
+          <button className="tour-btn-minimal">Enter Tour</button>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Virtual Tour Cover" />
+    </div>
 
-        </section>
-
-      )}
+    {/* Editorial Masonry Gallery */}
+    <div className="editorial-gallery">
+      {gallery.map((img, i) => (
+        <div key={i} className={`gallery-item item-${i}`}>
+          <div className="img-hover-box">
+            <img src={img} alt={`Gallery ${i}`} />
+            <div className="img-overlay">
+              <span>View Detail</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
 
       {/* MENU */}
 
-      {tab === "menu" && (
 
-        <section className="section">
+{tab === "menu" && (
+  <section className="section luxury-menu-slim">
+    <div className="slim-menu-wrapper">
+      
+      {/* Header Minimalist */}
+      <header className="slim-header">
+        <span className="gold-subtitle">La Carte Gastronomique</span>
+        <h2 className="slim-title">A Symphony of <span>Excellence</span></h2>
+      </header>
 
-          <h2>Popular Dishes</h2>
-
-          <div className="menu-grid">
-
-            {dishes.map((dish, i) => (
-
-              <div className="menu-card" key={i}>
-                <h3>{dish.name}</h3>
-                <span>{dish.price}</span>
-              </div>
-
-            ))}
-
-          </div>
-
-        </section>
-
-      )}
-
-      {/* REVIEWS */}
-
-      {tab === "reviews" && (
-
-        <section className="section">
-
-          <h2>Guest Reviews</h2>
-
-          {reviews.map((review, i) => (
-
-            <div className="review-card" key={i}>
-
-              <div className="review-user">
-
-                <img src={review.image} alt="reviewer" />
-
-                <div>
-                  <h4>{review.name}</h4>
-                  <span>⭐⭐⭐⭐⭐</span>
-                </div>
-
-              </div>
-
-              <p>{review.text}</p>
-
+      {/* Grid Slim Cards */}
+      <div className="slim-grid">
+        {dishes.map((dish, i) => (
+          <div className="slim-card" key={i}>
+            
+            {/* Visual Side (Smaller & Focused) */}
+            <div className="slim-visual">
+              <img src={dish.image} alt={dish.name} />
+               
             </div>
 
-          ))}
+            {/* Content Side (Sophisticated) */}
+            <div className="slim-info">
+              <div className="slim-row-top">
+                <h3>{dish.name}</h3>
+                <span className="slim-price">{dish.price}</span>
+              </div>
+              <p className="slim-desc">{dish.desc || dish.description}</p>
+              
+              <div className="slim-footer">
+                <span className="slim-tag">✧ Signature Dish</span>
+                {i === 0 && <span className="slim-award">Chef's Choice</span>}
+              </div>
+            </div>
 
-        </section>
-
-      )}
-
-      {/* LOCATION */}
-
-      {tab === "location" && (
-
-        <section className="section">
-
-          <h2>Location</h2>
-
-          <iframe
-            src="https://www.google.com/maps?q=marrakech&output=embed"
-            title="map"
-          />
-
-        </section>
-
-      )}
-
-      {/* SIMILAR RESTAURANTS */}
-
-              <section className="section">
-
-        <h2>Similar Restaurants</h2>
-
-        <div className="places-grid">
-
-        {similarPlaces.map((place)=>(
-            
-        <div key={place.id} className="place-card">
-
-        <img src={place.image} alt={place.name}/>
-
-        <div className="place-content">
-
-        <h3>{place.name}</h3>
-
-        <p>{place.city}</p>
-
-        <div className="place-info">
-        ⭐ {place.rating} • {place.price}
-        </div>
-
-        <Link to={`/place/${place.id}`}>
-        <button>View Details</button>
-        </Link>
-
-        </div>
-
-        </div>
-
+          </div>
         ))}
-
-        </div>
-
-        </section>
-
-      {/* FOOTER */}
-
-      <div className="footer2">
-        © 2026 Le Jardin Gourmet | Designed with ❤️ by Abdo
       </div>
+
+      <div className="slim-footer-action">
+        <button className="gold-btn-minimal">Download Full Menu</button>
+      </div>
+
+    </div>
+  </section>
+)} 
+      {/* REVIEWS */}
+
+     {/* REVIEWS: THE GUEST VOICES */}
+{tab === "reviews" && (
+  <section className="section vision-reviews">
+    <div className="vision-reviews-inner">
+      <header className="vision-header-pro">
+        <span className="v-eyebrow">Guest Testimonials</span>
+        <h2 className="v-title">Reflections of <span>Excellence</span></h2>
+      </header>
+
+      <div className="v-reviews-grid">
+        {reviews.map((review, i) => (
+          <div className="v-review-card" key={i}>
+            <div className="v-review-rating">
+              {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
+            </div>
+            <p className="v-review-quote">"{review.text}"</p>
+            <div className="v-review-author">
+              <div className="v-author-img">
+                <img src={review.image} alt={review.name} />
+              </div>
+              <div className="v-author-info">
+                <h4>{review.name}</h4>
+                <span>Verified Resident</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+{/* LOCATION: THE DESTINATION */}
+{tab === "location" && (
+  <section className="section vision-location">
+    <div className="v-location-wrapper">
+      <div className="v-location-content">
+        <span className="v-eyebrow">The Destination</span>
+        <h2 className="v-title">Where <span>Time Stops</span></h2>
+        
+        <div className="v-address-details">
+          <div className="v-address-group">
+            <label>Address</label>
+            <p>Hivernage District, Avenue Mohamed VI <br/> Marrakech, Morocco</p>
+          </div>
+          <div className="v-address-group">
+            <label>Concierge</label>
+            <p>+212 (0) 5 24 33 44 55 <br/> hello@lejardinpro.com</p>
+          </div>
+        </div>
+        
+        <div className="v-location-perks">
+          <span>✧ Private Valet</span>
+          <span>✧ Garden Access</span>
+          <span>✧ VIP Entrance</span>
+        </div>
+        
+        <button className="v-map-btn">Get Directions</button>
+      </div>
+
+      <div className="v-map-visual">
+        <div className="v-map-frame">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.0465223062316!2d-8.0163!3d31.6258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDM3JzMyLjkiTiA4wrAwMCc1OC43Ilc!5e0!3m2!1sen!2sma!4v1620000000000!5m2!1sen!2sma"
+            title="Premium Location"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
+   {/* THE ROYAL COLLECTION: SIMILAR PLACES */}
+<section className="section royal-gallery-section">
+  <div className="royal-container">
+    <header className="royal-header">
+      <span className="royal-eyebrow">The Curator's Selection</span>
+      <h2 className="royal-title">Exquisite <span>Refuges</span></h2>
+      <div className="royal-accent"></div>
+    </header>
+
+    <div className="royal-grid">
+      {similarPlaces.map((place, i) => (
+        <div key={place.id} className={`royal-card card-variant-${i % 3}`}>
+          <Link to={`/place/${place.id}`} className="royal-link">
+            
+            <div className="royal-visual-wrapper">
+              <img src={place.image} alt={place.name} className="royal-img" />
+              
+              {/* Glassmorphism Floating Info */}
+              <div className="royal-glass-badge">
+                <span className="royal-price">{place.price}</span>
+                <span className="royal-sep">|</span>
+                <span className="royal-rating">★ {place.rating}</span>
+              </div>
+
+              {/* Hover Discovery Layer */}
+              <div className="royal-hover-layer">
+                <div className="royal-discover-circle">
+                  <span>View sanctuary</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="royal-content">
+              <div className="royal-meta-top">
+                <span className="royal-city">{place.city}</span>
+                <div className="royal-line-short"></div>
+              </div>
+              <h3 className="royal-name">{place.name}</h3>
+              <p className="royal-description">A sanctuary of flavors where heritage meets contemporary elegance.</p>
+            </div>
+
+          </Link>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* THE ULTIMATE PLATFORM FOOTER */}
+<footer className="v-pro-footer">
+  <div className="v-footer-content">
+    
+    <div className="v-footer-main">
+      <div className="v-footer-brand">
+        <h2 className="v-footer-logo">The Luxury <span>Guide</span></h2>
+        <p className="v-footer-tagline">Curating the finest culinary sanctuaries in Marrakech since 2026.</p>
+      </div>
+      
+      <div className="v-footer-nav">
+        <div className="v-nav-col">
+          <h4>Platform</h4>
+          <a href="#about">Our Standards</a>
+          <a href="#selection">The Selection</a>
+        </div>
+        <div className="v-nav-col">
+          <h4>Social</h4>
+          <a href="#insta">Instagram</a>
+          <a href="#meta">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="v-footer-separator"></div>
+
+    <div className="v-footer-legal">
+      <div className="v-copy">
+        © 2026 ALL RIGHTS RESERVED TO THE LUXURY GUIDE.
+      </div>
+      <div className="v-signature">
+        CONCEPT & DESIGN BY <span>ABDO</span> — THE ARCHITECT
+      </div>
+    </div>
+
+  </div>
+  
+  {/* Decorative Background Text */}
+  <div className="v-footer-bg-text">EXCELLENCE</div>
+</footer>
 
     </div>
   );
